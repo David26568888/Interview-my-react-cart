@@ -1,0 +1,121 @@
+/************************************************
+ * 歷史訂單 - 整體容器
+ ************************************************/
+.order-history-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+.order-history-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.order-history-error {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+/************************************************
+ * 單張訂單卡片（香檳粉紅底色）
+ ************************************************/
+.order-card {
+  background: #f7e7ce; /* 香檳粉紅 Champagne Pink */
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+
+  border: 1px solid #d8c2a0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 訂單標題區：編號 + 總額 */
+.order-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 4px;
+  margin-bottom: 12px;
+}
+
+.order-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-total {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0077ff;
+}
+
+/************************************************
+ * 訂單內的商品卡片區
+ ************************************************/
+/* 商品卡片容器：橫向排列 + 自動換行 */
+.order-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+/* 每一個商品小卡 */
+.order-item-card {
+  width: 170px;                 /* 一張卡片固定寬度，一列約可放 4~5 張 */
+  background: #ffffffee;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 圖片區（用 wrapper 做好上下間距） */
+.order-item-image-wrapper {
+  margin-bottom: 8px;
+}
+
+/* 商品圖片 */
+.order-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* 無圖片時的占位方塊 */
+.no-image {
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* 文字資訊區 */
+.order-item-right {
+  text-align: center;
+}
+
+.item-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.item-detail {
+  font-size: 13px;
+  color: #444;
+  margin: 2px 0;
+}

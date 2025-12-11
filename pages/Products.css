@@ -1,0 +1,324 @@
+/* --------------------------------------------------
+   整體容器
+-------------------------------------------------- */
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+/* --------------------------------------------------
+   搜尋列：置中顯示在最上方
+-------------------------------------------------- */
+.search-bar {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.search-bar-center {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar form {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* --------------------------------------------------
+   主體：三欄併排（左：新增，中：商品，右：關注）
+-------------------------------------------------- */
+.main-layout {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* 左/右欄共用寬度 */
+.side-column {
+  flex: 0 0 200px;       /* 固定欄寬，可以依喜好調整 */
+}
+
+/* 中間商品列表欄 */
+.center-column {
+  flex: 1 1 auto;
+}
+
+/* --------------------------------------------------
+   左欄：新增商品表單
+-------------------------------------------------- */
+.add-product-form {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.add-product-form h2 {
+  margin-bottom: 10px;
+}
+
+.add-product-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-product-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-product-form button:hover {
+  background-color: #218838;
+}
+
+/* --------------------------------------------------
+   中間：商品列表（卡片）
+-------------------------------------------------- */
+.product-list-card {
+  width: 100%;
+}
+
+.product-list-card h1 {
+  margin-bottom: 10px;
+}
+
+/* 錯誤訊息 */
+.error-text {
+  color: #dc3545;
+  margin-bottom: 8px;
+}
+
+/* 卡片容器：使用 flex 做卡片網格 */
+.product-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* 每一張商品卡片 */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  flex: 1 1 calc(33.333% - 16px);  /* 一列大約 3 張，視窗縮小會自動變 2 / 1 張 */
+  min-width: 220px;
+}
+
+/* 圖片區 */
+.product-image-wrapper {
+  width: 100%;
+  height: 140px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.no-image {
+  width: 100%;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+/* 商品資訊：名稱 + 價格 */
+.product-info {
+  flex: 1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.product-info h3 {
+  margin: 4px 0;
+}
+
+.product-price {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+/* 卡片下半部：按鈕列 */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-actions button {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* 加入購物車按鈕（預設藍色） */
+.product-actions button:first-of-type {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.product-actions button:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+/* --------------------------------------------------
+   右欄：我的關注商品
+-------------------------------------------------- */
+.favorite-section {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7faff;
+}
+
+.favorite-section h2 {
+  margin-bottom: 10px;
+}
+
+.favorite-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorite-section li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 6px;
+  border: 1px solid #eee;
+}
+
+.favorite-section li img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------
+   關注按鈕樣式
+-------------------------------------------------- */
+.favorite-button {
+  padding: 6px 10px;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.favorite-button.follow {
+  background-color: #28a745;
+}
+
+.favorite-button.follow:hover {
+  background-color: #218838;
+}
+
+.favorite-button.unfollow {
+  background-color: #dc3545;
+}
+
+.favorite-button.unfollow:hover {
+  background-color: #c82333;
+}
+
+/* --------------------------------------------------
+   刪除按鈕樣式
+-------------------------------------------------- */
+
+.product-actions .delete-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.product-actions .delete-button:hover {
+  background-color: #c82333;
+}
+
+/* --------------------------------------------------
+   分頁控制
+-------------------------------------------------- */
+.pagination {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+  background-color: #ffffff;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #007bff;
+  color: #ffffff;
+}
+

@@ -1,0 +1,35 @@
+列出資料夾 PATH
+磁碟區序號為 7235-F6B0
+C:.
+|   App.css
+|   App.jsx
+|   index.css
+|   main.jsx
+|   project_structure.txt
+|   
++---assets
+|       react.svg
+|       
++---components
+|       Footer.css
+|       Footer.jsx
+|       Navbar.css
+|       Navbar.jsx
+|       
++---pages
+|       Cart.css
+|       Cart.jsx
+|       Checkout.css
+|       Checkout.jsx
+|       Home.jsx
+|       LoginPage.css
+|       LoginPage.jsx
+|       Products.css
+|       Products.jsx
+|       
+\---services
+        authService.js
+        cartService.js
+        favoriteService.js
+        productService.js
+        
